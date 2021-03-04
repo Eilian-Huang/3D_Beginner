@@ -363,5 +363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JohnLemon
       objectReference: {fileID: 0}
+    - target: {fileID: 8192116676389872689, guid: da12d6b108edf6349a1656087f8c77fe,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 28182588452935b4da77995d4c74a260, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da12d6b108edf6349a1656087f8c77fe, type: 3}
