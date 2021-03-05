@@ -6,23 +6,29 @@ public class PlayerMovement : MonoBehaviour
 {
     // radians that character rotates per second
     public float turnSpeed = 20f;
-    // Reference of Animator component
+
+    // Reference
     Animator m_Animator;
     Rigidbody m_Rigidbody;
+    AudioSource m_AudioSource;
     // Vector of 3D space
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
 
     // Start is called before the first frame update
-    void Start()
+    void Start ()
     {
-        // Set reference of Animator
+        // Set reference
         m_Animator = GetComponent<Animator> ();
         m_Rigidbody = GetComponent<Rigidbody> ();
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    /* FixedUpdate is called 
+     * before the physics system 
+     * handles all collisions and other interactions that have occurred
+     */
+    void FixedUpdate ()
     {
         // Variate of horizontal axis
         float horizontal = Input.GetAxis ("Horizontal");
@@ -40,6 +46,18 @@ public class PlayerMovement : MonoBehaviour
         bool hasVerticalInput = !Mathf.Approximately (vertical, 0f);
         // OR operator
         bool isWalking = hasHorizontalInput || hasVerticalInput;
+
+        if(isWalking)
+        {
+            if(!m_AudioSource.isPlaying)
+            {
+                m_AudioSource.Play ();
+            }
+        }
+        else
+        {
+            m_AudioSource.Stop ();
+        }
 
         m_Animator.SetBool ("IsWalking", isWalking);
         // Compute the forward vector of the character 
