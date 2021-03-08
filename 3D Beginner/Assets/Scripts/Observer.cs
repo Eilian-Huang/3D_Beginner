@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Observer : MonoBehaviour
 {
     // Reference of JohnLemon's transform
     public Transform player;
     public GameEnding gameEnding;
+    public SliderControl SliderControl;
 
     bool m_IsPlayerInRange;
+    bool m_IsPlayerDamaged;
 
     void OnTriggerEnter (Collider other)
     {
@@ -24,13 +27,14 @@ public class Observer : MonoBehaviour
         if(other.transform == player)
         {
             m_IsPlayerInRange = false;
+            m_IsPlayerDamaged = false;
         }
     }
 
     // Update is called once per frame
     void Update ()
     {
-        if(m_IsPlayerInRange)
+        if(m_IsPlayerInRange && !m_IsPlayerDamaged)
         {
             /*
              * Vector from PointOfView to JohnLemon 
@@ -45,7 +49,13 @@ public class Observer : MonoBehaviour
             {
                 if(raycastHit.collider.transform == player)
                 {
-                    gameEnding.CaughtPlayer ();
+                    float health = SliderControl.GetSliderValue() - 1;
+                    if (health <= 0)
+                    {
+                        gameEnding.CaughtPlayer ();
+                    }
+                    SliderControl.SetSliderValue (health);
+                    m_IsPlayerDamaged = true;
                 }
             }
         }
