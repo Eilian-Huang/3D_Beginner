@@ -53,6 +53,7 @@ public class Observer : MonoBehaviour
             {
                 if(raycastHit.collider.transform == player)
                 {
+                    // Player health - 1
                     float health = SliderControl.GetSliderValue() - 1;
                     if (health <= 0)
                     {
