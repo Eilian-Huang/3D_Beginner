@@ -34,6 +34,10 @@ public class Observer : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        /* Player is damaged only if he is in range
+         * And he is not in range last frame
+         * This make sure that he will not hurt to death in several frames
+         */
         if(m_IsPlayerInRange && !m_IsPlayerDamaged)
         {
             /*
