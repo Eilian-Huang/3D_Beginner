@@ -16,7 +16,7 @@ public class Observer : MonoBehaviour
     void OnTriggerEnter (Collider other)
     {
         // m_IsPlayerInRange is true only if JohnLemon is in range
-        if(other.transform == player)
+        if (other.transform == player)
         {
             m_IsPlayerInRange = true;
         }
@@ -24,7 +24,7 @@ public class Observer : MonoBehaviour
 
     void OnTriggerExit (Collider other)
     {
-        if(other.transform == player)
+        if (other.transform == player)
         {
             m_IsPlayerInRange = false;
             m_IsPlayerDamaged = false;
@@ -38,7 +38,7 @@ public class Observer : MonoBehaviour
          * And he is not in range last frame
          * This make sure that he will not hurt to death in several frames
          */
-        if(m_IsPlayerInRange && !m_IsPlayerDamaged)
+        if (m_IsPlayerInRange && !m_IsPlayerDamaged)
         {
             /*
              * Vector from PointOfView to JohnLemon 
@@ -49,9 +49,9 @@ public class Observer : MonoBehaviour
             Ray ray = new Ray (transform.position, direction);
             RaycastHit raycastHit;
             // Raycast is true when ray hits JohnLemon
-            if(Physics.Raycast(ray, out raycastHit))
+            if (Physics.Raycast(ray, out raycastHit))
             {
-                if(raycastHit.collider.transform == player)
+                if (raycastHit.collider.transform == player)
                 {
                     // Player health - 1
                     float health = SliderControl.GetSliderValue() - 1;
