@@ -7,6 +7,7 @@ public class LightAttack : MonoBehaviour
     public GameObject ghost;
     
     private bool m_IsGhostInRange;
+    private bool m_IsGhostDamaged;
 
     void OnTriggerEnter (Collider other)
     {
@@ -21,6 +22,7 @@ public class LightAttack : MonoBehaviour
         if (other.transform == ghost.transform)
         {
             m_IsGhostInRange = false;
+            m_IsGhostDamaged = false;
         }
     }
 
@@ -36,7 +38,8 @@ public class LightAttack : MonoBehaviour
             {
                 if (raycastHit.collider.transform == ghost.transform)
                 {
-                    GameObject.Find("GhostControl").GetComponent < GhostControl > ().GhostDieReborn(ghost, transform.parent.gameObject);
+                    ghost.transform.parent.gameObject.GetComponent<EnemyProperty>().ChangeEnemyHealth(-1, transform.parent.gameObject);
+                    m_IsGhostDamaged = true;
                 }
             }
         }

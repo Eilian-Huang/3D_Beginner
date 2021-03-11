@@ -6,22 +6,24 @@ public class EnemyHealthBar : MonoBehaviour
 {
     // Texture of blood bar
     public Texture2D bloodRed;
-    // public Texture2D bloodBlack;
+    public Texture2D bloodBlack;
 
     // Model height of target enemy
     float enemyHeight;
     // Health of enemy
-    // private int health = 1;
-    // private int maxHealth = 1;
+    private float HEALTH;
+    private float MAXHEALTH;
     // Main Camera
     private Camera m_camera;
 
     // Start is called before the first frame update
     void Start()
     {
+        HEALTH = transform.gameObject.GetComponent<EnemyProperty>().GetEnemyHealth();
+        MAXHEALTH = transform.gameObject.GetComponent<EnemyProperty>().MAXHEALTH;
         m_camera = Camera.main;
         // Get initial height of model
-        float size_y = GetComponent<Collider>().bounds.size.y;
+        float size_y = transform.GetComponentInChildren<Collider>().bounds.size.y;
         // Get scal proportion of model
         float scal_y = transform.localScale.y;
         enemyHeight = (size_y * scal_y);
@@ -40,17 +42,17 @@ public class EnemyHealthBar : MonoBehaviour
         position = new Vector2 (position.x, Screen.height - position.y);
         // Calculate the width and height of the health bar
         Vector2 bloodSize = GUI.skin.label.CalcSize(new GUIContent(bloodRed));
-        // Scal to fit
-        bloodSize.y /= 16; bloodSize.x /= 4;
         // Calculate the red blood bar display area by health
-        // int blood_width = bloodRed.width * health / maxHealth;
+        float blood_width = bloodRed.width * HEALTH / MAXHEALTH;
+        // Scal to fit
+        bloodSize.y /= 16; bloodSize.x /= 4; blood_width /= 4;
         // Draw black health bar
-        // GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y, 
-        //     bloodSize.x, bloodSize.y), bloodBlack);
+        GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y, 
+             bloodSize.x, bloodSize.y), bloodBlack);
         // Draw health bar
-        // GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y,
-        //     blood_width, bloodSize.y), bloodRed);
         GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y,
-            bloodSize.x, bloodSize.y), bloodRed);
+             blood_width, bloodSize.y), bloodRed);
+        // GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y,
+        //    bloodSize.x, bloodSize.y), bloodRed);
     }
 }

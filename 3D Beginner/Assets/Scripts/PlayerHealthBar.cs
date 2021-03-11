@@ -3,7 +3,8 @@ using UnityEngine.UI;
  
 public class PlayerHealthBar : RawImage 
 {
-    private Slider m_BloodSlider;  
+    private Slider m_BloodSlider;
+
     protected override void OnRectTransformDimensionsChange()  
     {
         base.OnRectTransformDimensionsChange();  

@@ -7,8 +7,6 @@ public class Observer : MonoBehaviour
 {
     // Reference of JohnLemon's transform
     public Transform player;
-    public GameEnding gameEnding;
-    public SliderControl SliderControl;
 
     bool m_IsPlayerInRange;
     bool m_IsPlayerDamaged;
@@ -53,13 +51,7 @@ public class Observer : MonoBehaviour
             {
                 if (raycastHit.collider.transform == player)
                 {
-                    // Player health - 1
-                    float health = SliderControl.GetSliderValue() - 1;
-                    if (health <= 0)
-                    {
-                        gameEnding.CaughtPlayer ();
-                    }
-                    SliderControl.SetSliderValue (health);
+                    player.gameObject.GetComponent<PlayerProperty>().ChangePlayerHealth(-1);
                     m_IsPlayerDamaged = true;
                 }
             }
