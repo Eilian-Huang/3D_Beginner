@@ -53,12 +53,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5855677457898767227}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fb822d007d24534888bb662db3f10d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 0}
-  prefab: {fileID: 0}
-  light: {fileID: 0}
-  rebornTime: 3
