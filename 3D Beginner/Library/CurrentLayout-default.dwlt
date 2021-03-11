@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 47
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 100
+  controlID: 114
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 101
+  controlID: 115
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 403
     height: 581
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -418,24 +418,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 85}
-      m_SelectedIDs: d053faff
-      m_LastClickedID: -371760
-      m_ExpandedIDs: f4f5ffff06f6ffff9cf6ffff3cf7ffff4ef7ffff5af7ffff6cf7ffff7af7ffff02f8ffff0cf8ffff0ef8ffff4cf9ffff44fbffffa638000094390000
+      scrollPos: {x: 0, y: 1029}
+      m_SelectedIDs: 4a380000
+      m_LastClickedID: 14410
+      m_ExpandedIDs: 6cf7ffff78f7ffff44fbffff6a38000086380000c63800000c390000303900006c39000082390000c0390000da390000e0390000023a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: PlayerImage
+        m_OriginalName: PlayerImage
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 14794
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -529,13 +529,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.5468274, y: -0.010469063, z: 0.0093951505, w: -0.8376127}
+    m_Target: {x: -0.6151611, y: -0.010823798, z: 0.011169367, w: -0.7887655}
     speed: 2
-    m_Value: {x: -0.5466052, y: -0.010464811, z: 0.009391334, w: -0.8372724}
+    m_Value: {x: -0.6149103, y: -0.010819385, z: 0.011164812, w: -0.78844386}
   m_Size:
-    m_Target: 16.527302
+    m_Target: 13.747238
     speed: 2
-    m_Value: 16.527302
+    m_Value: 13.747238
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -610,9 +610,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 68590000
-    m_LastClickedID: 22888
-    m_ExpandedIDs: 00000000245900002659000000ca9a3b
+    m_SelectedIDs: 985b0000
+    m_LastClickedID: 23448
+    m_ExpandedIDs: 000000002a5a00002c5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -640,7 +640,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002459000026590000
+    m_ExpandedIDs: 000000002a5a00002c5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,24 +665,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0ef8ffff
-    m_LastClickedInstanceID: -2034
+    m_SelectedInstanceIDs: 4ae3ffff
+    m_LastClickedInstanceID: -7350
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000563b0000603b000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: LightControl
-      m_OriginalName: LightControl
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 362714
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:

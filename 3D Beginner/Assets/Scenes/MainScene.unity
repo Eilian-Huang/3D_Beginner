@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 076bd1eabbf2270408c5d2b3e364b293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rebornTimeAfterLightOff: 3
+  NotAttackTimeAfterReborn: 3
 --- !u!4 &9596973
 Transform:
   m_ObjectHideFlags: 0
@@ -4481,7 +4483,7 @@ PrefabInstance:
     - target: {fileID: 6715014812205768540, guid: 549c69af39b84624b8a053537c407def,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6715014812225496124, guid: 549c69af39b84624b8a053537c407def,
         type: 3}

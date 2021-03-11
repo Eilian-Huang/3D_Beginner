@@ -5,12 +5,8 @@ using UnityEngine;
 public class LightAttack : MonoBehaviour
 {
     public GameObject ghost;
-    public GameObject light;
-    public float rebornTime;
     
     private bool m_IsGhostInRange;
-    private bool m_IsGhost;
-    private float m_Timer = 0.0f;
 
     void OnTriggerEnter (Collider other)
     {
@@ -40,18 +36,8 @@ public class LightAttack : MonoBehaviour
             {
                 if (raycastHit.collider.transform == ghost.transform)
                 {
-                    //Destroy(ghost);
-                    m_IsGhost = false;
+                    GameObject.Find("GhostControl").GetComponent < GhostControl > ().GhostDieReborn(ghost, transform.parent.gameObject);
                 }
-            }
-        }
-        if (!light.activeInHierarchy)
-        {
-            m_Timer += Time.deltaTime;
-            if (m_Timer >= rebornTime && !m_IsGhost)
-            {
-                //Instantiate(ghost);
-                m_IsGhost = true;
             }
         }
     }
