@@ -15,6 +15,7 @@ public class GhostControl : MonoBehaviour
 
     public void GhostDieReborn (GameObject ghost, GameObject light)
     {
+        // Ghost dies
         ghost.SetActive(false);
         isGhostDie = true;
         m_ghost = ghost;
@@ -23,12 +24,12 @@ public class GhostControl : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("ghost: "+m_ghost);
-        Debug.Log("light: "+m_light);
         isLightOff = !m_light.activeInHierarchy;
+        // Ghost will reborn only if light is off
         if (isLightOff)
         {
             m_Timer += Time.deltaTime;
+            // Ghost will reborn when light is off for "rebornTimeAfterLightOff" seconds
             if (m_Timer >= rebornTimeAfterLightOff && isLightOff && isGhostDie)
             {
                 m_ghost.SetActive(true);
@@ -36,6 +37,7 @@ public class GhostControl : MonoBehaviour
                 isGhostDie = false;
                 m_Timer = 0;
             }
+            // Ghost won't attack player for "NotAttackTimeAfterReborn" seconds after it's reborn
             if (!isGhostDie && m_Timer >= NotAttackTimeAfterReborn)
             {
                 m_ghost.transform.GetChild(2).gameObject.SetActive(true);

@@ -40,19 +40,19 @@ public class EnemyHealthBar : MonoBehaviour
         Vector2 position = m_camera.WorldToScreenPoint (worldPosition);
         // Get 2D coordinates of target enemy
         position = new Vector2 (position.x, Screen.height - position.y);
+
         // Calculate the width and height of the health bar
         Vector2 bloodSize = GUI.skin.label.CalcSize(new GUIContent(bloodRed));
         // Calculate the red blood bar display area by health
         float blood_width = bloodRed.width * HEALTH / MAXHEALTH;
         // Scal to fit
         bloodSize.y /= 16; bloodSize.x /= 4; blood_width /= 4;
+
         // Draw black health bar
         GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y, 
              bloodSize.x, bloodSize.y), bloodBlack);
         // Draw health bar
         GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y,
              blood_width, bloodSize.y), bloodRed);
-        // GUI.DrawTexture(new Rect(position.x - (bloodSize.x/2), position.y-bloodSize.y,
-        //    bloodSize.x, bloodSize.y), bloodRed);
     }
 }

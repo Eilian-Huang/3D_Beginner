@@ -21,6 +21,10 @@ public class PlayerProperty : MonoBehaviour
         return m_PlayerHealth;
     }
 
+    /// <summary>
+    /// Change player's hit points by changeValue
+    /// </summary>
+    /// <param name="changeValue">position and negative is needed</param>
     public void ChangePlayerHealth (float changeValue)
     {
         if (0 == changeValue)

@@ -15,12 +15,14 @@ public class LightControl : MonoBehaviour
     void Update()
     {
         m_Timer += Time.deltaTime;
+        // Turn lights off when it's on for "LightOnTimer" seconds
         if (m_Timer >= lightOnTimer && isLightOn)
         {
             light.SetActive(false);
             isLightOn = false;
             m_Timer = 0;
         }
+        // Turn lights on when it's off for "LightOffTimer" seconds
         if (m_Timer >= lightOffTimer && !isLightOn)
         {
             light.SetActive(true);

@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: JohnToon
   m_Shader: {fileID: 4800000, guid: 5d4e2edecb5241c47ae2c2e9d26ae05d, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -64,6 +64,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Alpha: 1
     - _Border: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -86,5 +87,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BorderColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Color: {r: 0.754717, g: 0.72979707, b: 0.72979707, a: 1}
+    - _Color: {r: 0.75471693, g: 0.72979707, b: 0.72979707, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}

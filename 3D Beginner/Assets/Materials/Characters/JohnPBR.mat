@@ -80,7 +80,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularEnable: 0
     - _SpecularHighlights: 1
-    - _SpecularPower: 0.01
+    - _SpecularPower: 0
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

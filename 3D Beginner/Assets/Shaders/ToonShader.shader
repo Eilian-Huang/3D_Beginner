@@ -71,6 +71,10 @@
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
 		#pragma shader_feature SPECULAR_ENABLE
+		/*************************************************
+		 * #pragma surface surf Ramp fullforwardshadows alpha
+		 * Enable alpha to make object transparent
+		**************************************************/
 		#pragma surface surf Ramp fullforwardshadows
 
 		// Use shader model 3.0 target, to get nicer looking lighting
@@ -118,6 +122,13 @@
 			o.Specular = _SpecularPower * tex2D(_SpecTex, IN.uv_MainTex);
 			o.Normal = normal;
 		}
+
+		/*************************************************
+		 * Enable alpha to make object transparent
+		**************************************************
+		void alpha() {
+		
+		}*/
 		ENDCG
 
 		

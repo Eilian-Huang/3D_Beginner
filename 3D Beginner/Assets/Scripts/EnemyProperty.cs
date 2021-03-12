@@ -19,6 +19,10 @@ public class EnemyProperty : MonoBehaviour
         return m_EnemyHealth;
     }
 
+    /// <summary>
+    /// Change enemy hit points by changeValue
+    /// </summary>
+    /// <param name="changeValue">position and negative is needed</param>
     public void ChangeEnemyHealth (float changeValue)
     {
         if (0 == changeValue)
@@ -49,6 +53,10 @@ public class EnemyProperty : MonoBehaviour
     {
     }
 
+    /// <summary>
+    /// Overloaded when ghost is hurt by light
+    /// </summary>
+    /// <param name="lights"></param>
     private void EnemyDieOperation (GameObject lights)
     {
         ghostControl.GhostDieReborn(transform.gameObject, lights);
