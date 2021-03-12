@@ -32,11 +32,24 @@ public class PlayerProperty : MonoBehaviour
             return;
         }
         m_PlayerHealth += changeValue;
+        playerSlider.value = m_PlayerHealth;
         if (m_PlayerHealth <= 0)
         {
-            gameEnding.CaughtPlayer();
-            m_PlayerHealth = MAXHEALTH;
+            PlayerDeath();
         }
-        playerSlider.value = m_PlayerHealth;
+    }
+
+    private void PlayerDeath ()
+    {
+        transform.GetChild(0).gameObject.GetComponent<PlayerFader>().PlayerFade();
+        StartCoroutine(GameEndingAndReborn(4f));
+    }
+
+    private IEnumerator GameEndingAndReborn (float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        gameEnding.CaughtPlayer();
+        m_PlayerHealth = MAXHEALTH;
+        transform.GetChild(0).gameObject.GetComponent<PlayerFader>().PlayerRecover();
     }
 }

@@ -75,10 +75,11 @@
 		 * #pragma surface surf Ramp fullforwardshadows alpha
 		 * Enable alpha to make object transparent
 		**************************************************/
-		#pragma surface surf Ramp fullforwardshadows
+		#pragma surface surf Ramp fullforwardshadows alpha
 
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
+
 
 		sampler2D _Ramp;
 
