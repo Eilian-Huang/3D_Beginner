@@ -157,7 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rebornTimeAfterLightOff: 3
-  NotAttackTimeAfterReborn: 3
+  notAttackTimeAfterReborn: 3
+  ghost: {fileID: 7316805254213808296}
 --- !u!4 &9596973
 Transform:
   m_ObjectHideFlags: 0
@@ -628,7 +629,7 @@ GameObject:
   - component: {fileID: 146817258}
   - component: {fileID: 146817259}
   m_Layer: 0
-  m_Name: LightControl (14)
+  m_Name: LightControl 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,7 +643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146817257}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.6, y: 1.462, z: 3.245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -917,7 +918,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rebornTimeAfterLightOff: 3
-  NotAttackTimeAfterReborn: 3
+  notAttackTimeAfterReborn: 3
+  ghost: {fileID: 817511156}
 --- !u!1 &183324280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1022355727804264, guid: cb713cc3279397b498f41ebe7ece59dc,
@@ -1351,7 +1353,7 @@ GameObject:
   - component: {fileID: 399015842}
   - component: {fileID: 399015843}
   m_Layer: 0
-  m_Name: LightControl (8)
+  m_Name: LightControl 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,7 +1367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399015841}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.6079998, y: 1.462, z: 4.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -1431,7 +1433,7 @@ GameObject:
   - component: {fileID: 429811612}
   - component: {fileID: 429811613}
   m_Layer: 0
-  m_Name: LightControl (1)
+  m_Name: LightControl 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,7 +1447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429811611}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.327, y: 1.462, z: 7.397}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -5150,7 +5152,7 @@ GameObject:
   - component: {fileID: 541396547}
   - component: {fileID: 541396548}
   m_Layer: 0
-  m_Name: LightControl (5)
+  m_Name: LightControl 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5164,7 +5166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541396546}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 1.462, z: 3.393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -5202,7 +5204,7 @@ GameObject:
   - component: {fileID: 643084604}
   - component: {fileID: 643084605}
   m_Layer: 0
-  m_Name: LightControl (11)
+  m_Name: LightControl 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5216,7 +5218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643084603}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.6009998, y: 1.462, z: -3.099999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -5613,7 +5615,7 @@ GameObject:
   - component: {fileID: 801482711}
   - component: {fileID: 801482712}
   m_Layer: 0
-  m_Name: LightControl (15)
+  m_Name: LightControl 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5627,7 +5629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801482710}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 20.194, y: 1.462, z: 2.746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -6358,8 +6360,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1031720944}
   - component: {fileID: 1031720945}
+  - component: {fileID: 1031720947}
+  - component: {fileID: 1031720946}
   m_Layer: 0
-  m_Name: LightControl
+  m_Name: LightControl 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6373,7 +6377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031720943}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.908, y: 1.462, z: 3.296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -6394,6 +6398,33 @@ MonoBehaviour:
   mlight: {fileID: 1329153326}
   lightOnTimer: 10
   lightOffTimer: 15
+--- !u!114 &1031720946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031720943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5fabc848978704a885cfe761ed37b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2001819940}
+--- !u!136 &1031720947
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031720943}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1070941414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1022355727804264, guid: cb713cc3279397b498f41ebe7ece59dc,
@@ -6430,7 +6461,7 @@ GameObject:
   - component: {fileID: 1075770560}
   - component: {fileID: 1075770561}
   m_Layer: 0
-  m_Name: LightControl (9)
+  m_Name: LightControl 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6444,7 +6475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075770559}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.2, y: 1.462, z: 6.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -6579,7 +6610,7 @@ GameObject:
   - component: {fileID: 1122182717}
   - component: {fileID: 1122182718}
   m_Layer: 0
-  m_Name: LightControl (10)
+  m_Name: LightControl 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6593,7 +6624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122182716}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.2, y: 1.462, z: -3.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -6889,7 +6920,7 @@ GameObject:
   - component: {fileID: 1242193923}
   - component: {fileID: 1242193924}
   m_Layer: 0
-  m_Name: LightControl (13)
+  m_Name: LightControl 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6903,7 +6934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242193922}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.393024, y: 1.462, z: 2.063068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -7128,7 +7159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rebornTimeAfterLightOff: 3
-  NotAttackTimeAfterReborn: 3
+  notAttackTimeAfterReborn: 3
+  ghost: {fileID: 47463176}
 --- !u!1 &1399425678
 GameObject:
   m_ObjectHideFlags: 0
@@ -7381,7 +7413,7 @@ GameObject:
   - component: {fileID: 1635853520}
   - component: {fileID: 1635853521}
   m_Layer: 0
-  m_Name: LightControl (7)
+  m_Name: LightControl 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7395,7 +7427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635853519}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.3, y: 1.462, z: 3.391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -7587,7 +7619,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rebornTimeAfterLightOff: 3
-  NotAttackTimeAfterReborn: 3
+  notAttackTimeAfterReborn: 3
+  ghost: {fileID: 148699973}
 --- !u!1 &1697287814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5396565652329605860, guid: c36647b5c1b91e74588b64d75f95423e,
@@ -7605,7 +7638,7 @@ GameObject:
   - component: {fileID: 1752898333}
   - component: {fileID: 1752898334}
   m_Layer: 0
-  m_Name: LightControl (2)
+  m_Name: LightControl 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7619,7 +7652,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752898332}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.605, y: 1.462, z: 2.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -7681,7 +7714,7 @@ GameObject:
   - component: {fileID: 1770428157}
   - component: {fileID: 1770428158}
   m_Layer: 0
-  m_Name: LightControl (3)
+  m_Name: LightControl 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7695,7 +7728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770428156}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.25, y: 1.462, z: 11.293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -7733,7 +7766,7 @@ GameObject:
   - component: {fileID: 1800299001}
   - component: {fileID: 1800299002}
   m_Layer: 0
-  m_Name: LightControl (12)
+  m_Name: LightControl 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7747,7 +7780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800299000}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.606, y: 1.462, z: 1.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -7949,7 +7982,7 @@ GameObject:
   - component: {fileID: 1919960003}
   - component: {fileID: 1919960004}
   m_Layer: 0
-  m_Name: LightControl (6)
+  m_Name: LightControl 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7963,7 +7996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919960002}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.87, y: 1.462, z: 4.395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -8342,7 +8375,7 @@ GameObject:
   - component: {fileID: 2118823139}
   - component: {fileID: 2118823140}
   m_Layer: 0
-  m_Name: LightControl (4)
+  m_Name: LightControl 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8356,7 +8389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118823138}
   m_LocalRotation: {x: -0, y: -0, z: 1.6940659e-21, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.37, y: 1.462, z: 7.388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 105819332}
@@ -8489,6 +8522,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 60eefb56cb5ea4a44a700b3ed52695a4, type: 2}
+    - target: {fileID: 5396565652343269344, guid: c36647b5c1b91e74588b64d75f95423e,
+        type: 3}
+      propertyPath: m_UpdateWhenOffscreen
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8319822970589399646, guid: c36647b5c1b91e74588b64d75f95423e,
         type: 3}
       propertyPath: ghostControl
