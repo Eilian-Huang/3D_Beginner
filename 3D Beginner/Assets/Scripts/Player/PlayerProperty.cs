@@ -11,6 +11,7 @@ public class PlayerProperty : MonoBehaviour
 
     private float m_PlayerHealth;
     private float m_PlayerSpeed = 1f;
+    private bool m_WeaponSystem;
 
     private void Awake()
     {
@@ -66,5 +67,10 @@ public class PlayerProperty : MonoBehaviour
     {
         yield return new WaitForSeconds(changeTime);
         transform.gameObject.GetComponent<PlayerMovement>().SetSpeed(1f, true);
+    }
+
+    public void SetWeaponSystem()
+    {
+        m_WeaponSystem = true;
     }
 }
