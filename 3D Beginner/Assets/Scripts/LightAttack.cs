@@ -33,7 +33,7 @@ public class LightAttack : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (m_IsGhostInRange)
+        if (m_IsGhostInRange && !m_IsGhostDamaged)
         {
             Vector3 direction = ghost.transform.position - transform.position + Vector3.up;
             Ray ray = new Ray (transform.position, direction);

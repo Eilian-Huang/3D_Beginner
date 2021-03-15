@@ -18,16 +18,19 @@ public class PlayerFader : MonoBehaviour
 
     void Awake ()
     {
+        // Materials of player
         m_JohnToon = transform.gameObject.GetComponent<SkinnedMeshRenderer>().materials[0];
         m_JohnPBR = transform.gameObject.GetComponent<SkinnedMeshRenderer>().materials[1];
     }
 
     private void Update()
     {
+        // Player fades when fading trigger is true
         if (m_PlayerFade)
         {
             SetMaterialRenderingMode(m_JohnToon, RenderingMode.Fade);
             SetMaterialRenderingMode(m_JohnPBR, RenderingMode.Fade);
+            // Using coroutines to fade
             StartCoroutine(Fade());
             m_PlayerFade = false;
         }
@@ -35,7 +38,8 @@ public class PlayerFader : MonoBehaviour
 
     IEnumerator Fade()
     {
-        for (int m_Fader = 255; m_Fader >= 0; m_Fader = m_Fader - 1)
+        // Slowly reduce alpha to zero
+        for (int m_Fader = 255; m_Fader >= 0; m_Fader--)
         {
             m_JohnToon.SetColor("_Color", new Color32(192, 186, 186, (byte)m_Fader));
             m_JohnPBR.SetColor("_Color", new Color32(255, 255, 255, (byte)m_Fader));
@@ -48,6 +52,7 @@ public class PlayerFader : MonoBehaviour
         m_PlayerFade = true;
     }
 
+    // Recover player's rendering mode and alpha
     public void PlayerRecover ()
     {
         SetMaterialRenderingMode(m_JohnToon, RenderingMode.Opaque);

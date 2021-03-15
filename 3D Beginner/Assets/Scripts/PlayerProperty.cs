@@ -10,6 +10,7 @@ public class PlayerProperty : MonoBehaviour
     public float MAXHEALTH;
 
     private float m_PlayerHealth;
+    private float m_PlayerSpeed = 1f;
 
     private void Awake()
     {
@@ -39,17 +40,31 @@ public class PlayerProperty : MonoBehaviour
         }
     }
 
+    public void ChangePlayerSpeed (float speed, float changeTime)
+    {
+        m_PlayerSpeed = speed;
+        transform.gameObject.GetComponent<PlayerMovement>().SetSpeed(m_PlayerSpeed, true);
+        StartCoroutine(PlayerSpeedRecover(changeTime));
+    }
+
     private void PlayerDeath ()
     {
         transform.GetChild(0).gameObject.GetComponent<PlayerFader>().PlayerFade();
         StartCoroutine(GameEndingAndReborn(4f));
     }
 
+    // GameEnding begins when player's fading ends
     private IEnumerator GameEndingAndReborn (float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
         gameEnding.CaughtPlayer();
         m_PlayerHealth = MAXHEALTH;
         transform.GetChild(0).gameObject.GetComponent<PlayerFader>().PlayerRecover();
+    }
+
+    private IEnumerator PlayerSpeedRecover (float changeTime)
+    {
+        yield return new WaitForSeconds(changeTime);
+        transform.gameObject.GetComponent<PlayerMovement>().SetSpeed(1f, true);
     }
 }

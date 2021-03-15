@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
 
+    private float m_SpeedRatio = 1f;
+
     // Start is called before the first frame update
     void Start ()
     {
@@ -72,8 +74,21 @@ public class PlayerMovement : MonoBehaviour
     {
         // Movement
         m_Rigidbody.MovePosition (m_Rigidbody.position + m_Movement 
-            * m_Animator.deltaPosition.magnitude);
+            * m_Animator.deltaPosition.magnitude * m_SpeedRatio);
         // Rotation
         m_Rigidbody.MoveRotation (m_Rotation);
+    }
+
+    // Set speed
+    public void SetSpeed(float ratio, bool IsSet)
+    {
+        if (IsSet == true)
+        {
+            m_SpeedRatio = ratio;
+        }
+        else if (IsSet == false)
+        {
+            m_SpeedRatio = 1f;
+        }
     }
 }
