@@ -9,8 +9,6 @@ public class TrapAttack : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.transform);
-        Debug.Log(player.transform);
         // m_IsPlayerInRange is true only if JohnLemon is in range
         if (other.transform == player.transform)
         {

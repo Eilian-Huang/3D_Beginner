@@ -1,12 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnnoBox : MonoBehaviour
 {
     public GameObject player;
 
-    private Animator m_Animator;
     private bool m_IsPlayerInRange;
     private bool m_IsBoxOpen = false;
 
@@ -26,20 +24,24 @@ public class AnnoBox : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        m_Animator = GetComponent<Animator>();
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (m_IsPlayerInRange && Input.GetKeyDown(KeyCode.F))
         {
             transform.GetChild(1).Rotate(-90, 0, 0);
-            player.GetComponent<PlayerProperty>().SetWeaponSystem();
             m_IsBoxOpen = true;
+            StartCoroutine("Appear");
+            transform.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    IEnumerator Appear()
+    {
+        for (int count = 60; count >= 0; count --)
+        {
+            GameObject.Find("M1911").transform.position += new Vector3(0, 0.01f, 0);
+            yield return null;
         }
     }
 
@@ -49,5 +51,10 @@ public class AnnoBox : MonoBehaviour
         {
             GUI.Box(new Rect(440, 120, 100, 24), "按F打开");
         }
+    }
+
+    public bool IsBoxOpen()
+    {
+        return m_IsBoxOpen;
     }
 }

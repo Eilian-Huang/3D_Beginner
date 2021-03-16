@@ -2,7 +2,7 @@
 
 public class LightControl : MonoBehaviour
 {
-    public GameObject light;
+    public GameObject mLight;
     public float lightOnTimer;
     public float lightOffTimer;
 
@@ -32,7 +32,7 @@ public class LightControl : MonoBehaviour
     {
         if (m_IsPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            light.SetActive(!isLightOn);
+            mLight.SetActive(!isLightOn);
             isLightOn = !isLightOn;
             m_Timer = 0;
         }
@@ -40,14 +40,14 @@ public class LightControl : MonoBehaviour
         // Turn lights off when it's on for "LightOnTimer" seconds
         if (m_Timer >= lightOnTimer && isLightOn)
         {
-            light.SetActive(false);
+            mLight.SetActive(false);
             isLightOn = false;
             m_Timer = 0;
         }
         // Turn lights on when it's off for "LightOffTimer" seconds
         if (m_Timer >= lightOffTimer && !isLightOn)
         {
-            light.SetActive(true);
+            mLight.SetActive(true);
             isLightOn = true;
             m_Timer = 0;
         }

@@ -72,5 +72,11 @@ public class PlayerProperty : MonoBehaviour
     public void SetWeaponSystem()
     {
         m_WeaponSystem = true;
+        transform.gameObject.GetComponent<WeaponSystem>().Active();
+    }
+
+    public void CloseWeaponSystem()
+    {
+        m_WeaponSystem = false;
     }
 }
