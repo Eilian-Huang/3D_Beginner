@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     private bool m_IsHitEnemy;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Gargoyle" || other.tag == "Ghost")
         {
             m_IsHitEnemy = true;
         }

@@ -47,6 +47,11 @@ public class GhostControl : MonoBehaviour
                     m_Timer = 0;
                     m_IsGhostDieByLight = false;
                 }
+                if (m_Timer >= notAttackTimeAfterReborn)
+                {
+                    ghost.transform.GetChild(2).gameObject.SetActive(true);
+                    m_Timer = 0;
+                }
             }
         }
         if (m_IsGhostDie)
@@ -59,16 +64,11 @@ public class GhostControl : MonoBehaviour
                 m_Timer = 0;
                 m_IsGhostDie = false;
             }
-        }
-        if (!m_IsGhostDie || !m_IsGhostDieByLight)
-        {
-            m_Timer += Time.deltaTime;
-            // Ghost won't attack player for "NotAttackTimeAfterReborn" seconds after it's reborn
             if (m_Timer >= notAttackTimeAfterReborn)
             {
                 ghost.transform.GetChild(2).gameObject.SetActive(true);
+                m_Timer = 0;
             }
-            m_Timer = 0;
         }
     }
 }

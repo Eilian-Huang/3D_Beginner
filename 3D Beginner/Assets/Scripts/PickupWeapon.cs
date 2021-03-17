@@ -34,7 +34,7 @@ public class PickupWeapon : MonoBehaviour
         if (m_IsPlayerInRange && m_IsBoxOpen && Input.GetKeyDown(KeyCode.E))
         {
             player.GetComponent<PlayerProperty>().SetWeaponSystem();
-            box.transform.GetChild(3).gameObject.SetActive(false);
+            box.transform.GetChild(4).gameObject.SetActive(false);
             m_IsPickupWeapon = true;
         }
     }
