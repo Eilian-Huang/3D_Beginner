@@ -10,7 +10,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
+        if (other.tag == "Observer")
+        {
+            return;
+        }
         if (other.tag == "Gargoyle" || other.tag == "Ghost")
         {
             m_IsHitEnemy = true;
@@ -22,7 +25,6 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(m_EnemyName);
         if (m_IsHitEnemy)
         {
             GameObject.Find(m_EnemyName).GetComponent<EnemyProperty>().ChangeEnemyHealth(-1);

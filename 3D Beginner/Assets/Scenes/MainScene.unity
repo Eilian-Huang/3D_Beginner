@@ -9795,11 +9795,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8403043809534305902}
     m_Modifications:
-    - target: {fileID: 7033214439050273734, guid: a09268a35acc3eb418779b405e5ceb60,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7033214439050273736, guid: a09268a35acc3eb418779b405e5ceb60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9860,21 +9855,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 8192116677536440631}
-    - target: {fileID: 7033214439050273737, guid: a09268a35acc3eb418779b405e5ceb60,
-        type: 3}
-      propertyPath: gameEnding
-      value: 
-      objectReference: {fileID: 197867920}
-    - target: {fileID: 7033214439050273737, guid: a09268a35acc3eb418779b405e5ceb60,
-        type: 3}
-      propertyPath: playerBlood
-      value: 
-      objectReference: {fileID: 1990098895}
-    - target: {fileID: 7033214439050273737, guid: a09268a35acc3eb418779b405e5ceb60,
-        type: 3}
-      propertyPath: SliderControl
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7033214439050273739, guid: a09268a35acc3eb418779b405e5ceb60,
         type: 3}
       propertyPath: m_Name
