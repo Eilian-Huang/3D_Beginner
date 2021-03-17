@@ -4,6 +4,7 @@ public class EnemyProperty : MonoBehaviour
 {
     public float MAXHEALTH;
     public GhostControl ghostControl;
+    public GargoyleControl gargoyleControl;
 
     private float m_EnemyHealth;
 
@@ -49,6 +50,14 @@ public class EnemyProperty : MonoBehaviour
 
     private void EnemyDieOperation ()
     {
+        if (transform.tag == "Ghost")
+        {
+            ghostControl.GhostDieReborn();
+        }
+        if (transform.tag == "Gargoyle")
+        {
+            gargoyleControl.GargoyleDieReborn(transform.name);
+        }
     }
 
     /// <summary>

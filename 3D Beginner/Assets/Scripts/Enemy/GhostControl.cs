@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class GhostControl : MonoBehaviour
 {
@@ -44,16 +45,14 @@ public class GhostControl : MonoBehaviour
                 {
                     ghost.SetActive(true);
                     ghost.transform.GetChild(2).gameObject.SetActive(false);
+                    StartCoroutine("GhostNotAttack");
                     m_Timer = 0;
                     m_IsGhostDieByLight = false;
                 }
-                if (m_Timer >= notAttackTimeAfterReborn)
-                {
-                    ghost.transform.GetChild(2).gameObject.SetActive(true);
-                    m_Timer = 0;
-                }
             }
         }
+            
+        
         if (m_IsGhostDie)
         {
             m_Timer += Time.deltaTime;
@@ -61,14 +60,16 @@ public class GhostControl : MonoBehaviour
             {
                 ghost.SetActive(true);
                 ghost.transform.GetChild(2).gameObject.SetActive(false);
+                StartCoroutine("GhostNotAttack");
                 m_Timer = 0;
                 m_IsGhostDie = false;
-            }
-            if (m_Timer >= notAttackTimeAfterReborn)
-            {
-                ghost.transform.GetChild(2).gameObject.SetActive(true);
-                m_Timer = 0;
-            }
+            }          
         }
+    }
+
+    IEnumerator GhostNotAttack()
+    {
+        yield return new WaitForSeconds(3f);
+        ghost.transform.GetChild(2).gameObject.SetActive(true);
     }
 }

@@ -17,7 +17,6 @@ public class EnemyHealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HEALTH = transform.gameObject.GetComponent<EnemyProperty>().GetEnemyHealth();
         MAXHEALTH = transform.gameObject.GetComponent<EnemyProperty>().MAXHEALTH;
         m_camera = Camera.main;
         // Get initial height of model
@@ -27,6 +26,11 @@ public class EnemyHealthBar : MonoBehaviour
         enemyHeight = (size_y * scal_y);
         // Add offset
         enemyHeight += 0.5f;
+    }
+
+    private void Update()
+    {
+        HEALTH = transform.gameObject.GetComponent<EnemyProperty>().GetEnemyHealth();
     }
 
     void OnGUI ()
